@@ -1,0 +1,47 @@
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  margin-bottom: 5px;
+  background-color: #60c2e9;
+  cursor: pointer;
+  border: 1px solid #646464;
+}
+
+li:hover {
+  background-color: #a0d0e2;
+}
+
+.card {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #d6d5d5;
+  border: 1px solid #000000;
+}
+
+.card.lido {
+  background-color: #ccf3e0
+}
+
+.publicar {
+  margin-top: 10px;
+  color: #000000;
+}
+
+input {
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: rgb(160, 163, 163);
+  color: #000000;
+}

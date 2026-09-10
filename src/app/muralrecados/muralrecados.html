@@ -1,0 +1,34 @@
+<p>muralrecado works!</p>
+<div class="container">
+
+  <h1>Mural de Recados</h1>
+
+  <ul class="lista-recados">
+    @for (recado of recados; track $index) {
+      <li (click)="selecionarRecado(recado)">{{ recado }}</li>
+    }
+  </ul>
+
+  @if (recadoSelecionado) {
+    <div class="card" [ngClass]="{'lido': lido}">
+      <p><strong>Recado selecionado:</strong> {{ recadoSelecionado }}</p>
+
+      <button (click)="alternarLeitura()">
+        {{ lido ? 'Lido' : 'Não lido' }}
+      </button>
+
+      <button (click)="curtir()">Curtir ({{ curtidas }})</button>
+    </div>
+  } @else {
+    <p>Nenhum recado selecionado.</p>
+  }
+
+  <div class="publicar">
+    <input
+      [(ngModel)]="novoRecado"
+      placeholder="Novo recado"
+      (keyup.enter)="publicarRecado()">
+    <button [disabled]="novoRecado === ''" (click)="publicarRecado()"><strong>Publicar</strong></button>
+  </div>
+
+</div>
